@@ -1,12 +1,11 @@
-"use client"
-import { AbsoluteCenter,Avatar} from "@chakra-ui/react";
+import React from 'react'
 
-
-export default function Home() {
-    return (
-        <AbsoluteCenter>
-
-        </AbsoluteCenter>
-
-    );
+const page = () => {
+  return (
+    <div>
+      Hey
+    </div>
+  )
 }
+
+export default page

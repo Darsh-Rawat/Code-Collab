@@ -1,7 +1,11 @@
+import { auth } from "@/lib/auth";
 import { AbsoluteCenter,Button, CloseButton, Dialog, Portal, Steps,  } from "@chakra-ui/react"
+import { redirect } from "next/navigation";
 import { FaPlus } from "react-icons/fa";
 
-const page = () => {
+const page = async () => {
+    const session = await auth();
+    if (!session) redirect("/login")
     return (
         <AbsoluteCenter>
         <Dialog.Root>
